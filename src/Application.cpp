@@ -20,7 +20,7 @@ static bool GLLogCall(const char* function, const char* file, int line)
 {
     while ( GLenum error = glGetError() )
     {
-        std::cout << "[OpenGL ERROR]" << "(" << error << "): " << function << ", From: " << file << ", Line: " << line << std::endl;
+        std::cout << "[OpenGL ERROR]" << "(" << error << "): " << "ISSUE Appeared in Function/Method: " << function << ", From: " << file << ", Line: " << line << std::endl;
         return false;
     }
     return true;
@@ -175,7 +175,7 @@ int main(int argc, char* argv[], char **env)
 
     ShaderProgramSource source = ParseShader("res/shaders/Basic.shader");
     unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
-    GLCall( glUseProgram(shader); );
+    GLCall( glUseProgram(shader) );
 
 #if SHADER_PARSE_STATUS_CHECK
     std::cout << "[VERTEX Shader]:" << std::endl;
