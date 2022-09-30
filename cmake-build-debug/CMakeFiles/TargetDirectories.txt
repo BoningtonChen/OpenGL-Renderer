@@ -1,0 +1,3 @@
+/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/cmake-build-debug/CMakeFiles/OpenGL_BasicRendererProject.dir
+/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
