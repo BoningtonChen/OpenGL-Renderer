@@ -25,7 +25,7 @@ link_directories(
 # *定向可执行文件（记得变更项目名）
 add_executable(
         OpenGL_BasicRendererProject src/Application.cpp
-)
+        src/CompilerExtension.h)
 
 # *读取库地址（记得变更项目名）
 target_link_libraries(
