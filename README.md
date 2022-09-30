@@ -2,7 +2,7 @@
 © Bonington Chen, 2022
 
 ## Description
-- A Basic Modern OpenGL Project.
+- A Basic Modern OpenGL Renderer Project.
 - Using C++ 23, OpenGL Version 4.1, as well as GLSL Version 330 core.
 
 ## Project Structure
