@@ -11,6 +11,21 @@
 // * Project Header files
 #include "CompilerExtension.h"
 
+static void GLClearError()
+{
+    while (glGetError() != GL_NO_ERROR);
+}
+
+static bool GLLogCall(const char* function, const char* file, int line)
+{
+    while ( GLenum error = glGetError() )
+    {
+        std::cout << "[OpenGL ERROR]" << "(" << error << "): " << function << ", From: " << file << ", Line: " << line << std::endl;
+        return false;
+    }
+    return true;
+}
+
 // ! 宏状态定义切换
 #define SHADER_PARSE_STATUS_CHECK 1
 
@@ -56,25 +71,25 @@ static ShaderProgramSource ParseShader(const std::string& filepath)
 
 static unsigned int CompileShader(unsigned int type, const std::string& source)
 {
-    unsigned int id = glCreateShader(type);
+    GLCall( unsigned int id = glCreateShader(type) );
     const char* src = source.c_str();
-    glShaderSource(id, 1, &src, nullptr);
-    glCompileShader(id);
+    GLCall( glShaderSource(id, 1, &src, nullptr) );
+    GLCall( glCompileShader(id) );
 
     int result;
-    glGetShaderiv(id, GL_COMPILE_STATUS, &result);
+    GLCall( glGetShaderiv(id, GL_COMPILE_STATUS, &result) );
     if (result == GL_FALSE)
     {
         int length;
-        glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length);
+        GLCall( glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length) );
         char* message = (char*)alloca( length * sizeof(char) );
-        glGetShaderInfoLog(id, length, &length, message);
+        GLCall( glGetShaderInfoLog(id, length, &length, message) );
 
         std::cout << "[Shader Compile ERROR Messages]:" << std::endl;
         std::cout << "Fail to compile: " << (type == GL_VERTEX_SHADER ? "VERTEX " : "FRAGMENT ") << "Shader !" << std::endl;
         std::cout << message << std::endl;
 
-        glDeleteShader(id);
+        GLCall( glDeleteShader(id) );
         return 0;
     }
 
@@ -83,7 +98,7 @@ static unsigned int CompileShader(unsigned int type, const std::string& source)
 
 static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader)
 {
-    unsigned int program = glCreateProgram();
+    GLCall( unsigned int program = glCreateProgram() );
     unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
     unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
 
@@ -160,7 +175,7 @@ int main(int argc, char* argv[], char **env)
 
     ShaderProgramSource source = ParseShader("res/shaders/Basic.shader");
     unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
-    glUseProgram(shader);
+    GLCall( glUseProgram(shader); );
 
 #if SHADER_PARSE_STATUS_CHECK
     std::cout << "[VERTEX Shader]:" << std::endl;
@@ -175,7 +190,7 @@ int main(int argc, char* argv[], char **env)
         // ! 在此处渲染内容
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+        GLCall( glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr) );
 
         // ! 交换前后端 buffer
         glfwSwapBuffers(window);
@@ -184,7 +199,7 @@ int main(int argc, char* argv[], char **env)
         glfwPollEvents();
     }
 
-    glDeleteProgram(shader);
+    GLCall( glDeleteProgram(shader); );
 
     glfwTerminate();
 

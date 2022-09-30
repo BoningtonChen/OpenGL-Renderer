@@ -39,3 +39,10 @@
 #elif defined(__APPLE__) && ( defined(__i386__) || defined(__x86_64__) )
 #define __debugbreak() __asm__ __volatile__("int $3; mov %eax, %eax")
 #endif
+
+// * 用于自动化输出错误
+#define ASSERT(expr) if ( !(expr) ) __debugbreak()
+
+#define GLCall(function) GLClearError(); \
+    function;                            \
+    ASSERT( GLLogCall(#function, __FILE__, __LINE__) )
