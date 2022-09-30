@@ -102,14 +102,14 @@ static unsigned int CreateShader(const std::string& vertexShader, const std::str
     unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
     unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
 
-    glAttachShader(program, vs);
-    glAttachShader(program, fs);
+    GLCall( glAttachShader(program, vs) );
+    GLCall( glAttachShader(program, fs) );
 
-    glLinkProgram(program);
-    glValidateProgram(program);
+    GLCall( glLinkProgram(program) );
+    GLCall( glValidateProgram(program) );
 
-    glDeleteShader(vs);
-    glDeleteShader(fs);
+    GLCall( glDeleteShader(vs) );
+    GLCall( glDeleteShader(fs) );
 
     return program;
 }
@@ -202,6 +202,7 @@ int main(int argc, char* argv[], char **env)
     GLCall( glDeleteProgram(shader); );
 
     glfwTerminate();
+
 
     // ! 控制台 console 获取主程序参数
     std::cout << std::endl;
