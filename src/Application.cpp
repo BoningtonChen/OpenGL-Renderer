@@ -135,19 +135,32 @@ int main(int argc, char* argv[], char **env)
     // ! OpenGL 准备工作
     float positions[] = {
             -0.5f, -0.5f,
-            0.0f, 0.5f,
-            0.5f, -0.5f
+            +0.5f, -0.5f,
+            +0.5f, +0.5f,
+            -0.5f, +0.5f
+    };
+
+    unsigned int indices[] = {
+            0, 1, 2,
+            2, 3, 0
     };
 
     unsigned int buffer;
     glGenBuffers(1, &buffer);
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(positions), positions, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof positions, positions, GL_STATIC_DRAW);
 
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr);
 
+    unsigned int ibo;   // index buffer object
+    glGenBuffers(1, &ibo);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof ibo, indices, GL_STATIC_DRAW);
+
     ShaderProgramSource source = ParseShader("res/shaders/Basic.shader");
+    unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
+    glUseProgram(shader);
 
 #if SHADER_PARSE_STATUS_CHECK
     std::cout << "[VERTEX Shader]:" << std::endl;
@@ -156,16 +169,13 @@ int main(int argc, char* argv[], char **env)
     std::cout << source.FragmentSource << std::endl;
 #endif
 
-    unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
-    glUseProgram(shader);
-
     // ! 循环当前窗口
     while ( !glfwWindowShouldClose(window) )
     {
         // ! 在此处渲染内容
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
 
         // ! 交换前后端 buffer
         glfwSwapBuffers(window);
