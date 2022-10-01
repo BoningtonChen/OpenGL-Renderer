@@ -15,6 +15,7 @@
     - Basic.shader
 - src
   - Application.cpp
+  - CompilerExtension.h
 - .gitignore
 - README.md
 - CMakeLists.txt

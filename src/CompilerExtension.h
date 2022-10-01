@@ -7,7 +7,7 @@
 
 #endif //OPENGL_BASICRENDERERPROJECT_COMPILEREXTENSION_H
 
-// ! 在macOS上实现MSVC的 __debugbreak(); 编译器函数
+// ! 在macOS上实现MSVC的 __debugbreak() 编译器函数
 #if defined(__APPLE__) && defined(__aarch64__)
 #define __debugbreak() __asm__ __volatile__(
     "   mov    x0, %x0;

@@ -20,7 +20,7 @@ static bool GLLogCall(const char* function, const char* file, int line)
 {
     while ( GLenum error = glGetError() )
     {
-        std::cout << "[OpenGL ERROR]" << "(" << error << "): " << "ISSUE Appeared in Function/Method: " << function << ", From: " << file << ", Line: " << line << std::endl;
+        std::cout << "[OpenGL ERROR]" << "(" << error << "): " << "ISSUE Occurred in Function/Method: " << function << ", From: " << file << ", Line: " << line << std::endl;
         return false;
     }
     return true;
