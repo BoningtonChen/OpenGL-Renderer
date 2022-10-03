@@ -5,6 +5,7 @@
 13	162	1664764247075129445	OpenGL_BasicRendererProject	627052240df624cf
 1297	1670	1664764028462280038	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLEW/src/visualinfo.c.o	a961cba9358b4dd6
 0	1316	1664450293921152648	CMakeFiles/OpenGL_BasicRendererProject.dir/main.cpp.o	69a1fd3ac16cb1b3
-0	148	1664764331181181010	build.ninja	7c2ec44ce86e83bc
+1	197	1664764981740273860	build.ninja	7c2ec44ce86e83bc
 22	2317	1664764029105604019	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLEW/src/glewinfo.c.o	f69241f9b3db52c9
-1	197	1664764331181181010	build.ninja	7c2ec44ce86e83bc
+16	2979	1664765834631846874	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
+2979	3175	1664765834835598375	OpenGL_BasicRendererProject	627052240df624cf

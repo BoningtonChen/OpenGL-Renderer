@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.23)
+cmake_minimum_required(VERSION 3.23.2)
 project(OpenGL_BasicRendererProject)  # *记得变更项目名
 
 set(CMAKE_CXX_STANDARD 23)  # *选择C++版本
