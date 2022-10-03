@@ -34,17 +34,33 @@ add_executable(OpenGL_BasicRendererProject
 
         # *Project files
         src/Application.cpp
+
         src/CompilerExtension.h
-        src/Renderer.cpp src/Renderer.h
-        src/VertexBuffer.cpp src/VertexBuffer.h src/IndexBuffer.cpp src/IndexBuffer.h)
+
+        src/Renderer.cpp
+        src/Renderer.h
+
+        src/VertexBuffer.cpp
+        src/VertexBuffer.h
+
+        src/IndexBuffer.cpp
+        src/IndexBuffer.h
+
+        src/VertexArray.cpp
+        src/VertexArray.h
+
+        src/VertexBufferLayout.cpp
+        src/VertexBufferLayout.h
+        )
 
 # *读取库地址（记得变更项目名）
 target_link_libraries(
         OpenGL_BasicRendererProject
-        # GLFW lib
+        # *GLFW lib
         libglfw.3.dylib
         libglfw3.a
-        # GLEW lib
+
+        # *GLEW lib
         libGLEW.2.1.0.dylib
         libGLEW.2.1.dylib
         libGLEW.a
