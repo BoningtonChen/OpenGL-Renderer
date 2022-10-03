@@ -111,6 +111,8 @@ int main(int argc, char* argv[], char **env)
             shader.SetUniform4f("u_Color", 0.2f, r, 0.8f, 1.0f);
 
             renderer.Draw(va, ib, shader);
+            using namespace std::chrono_literals;
+            std::this_thread::sleep_for(50ms);
 
             if (r > 1.0f)
                 increment = -0.05f;
