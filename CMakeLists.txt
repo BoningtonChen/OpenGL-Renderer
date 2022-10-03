@@ -2,11 +2,13 @@ cmake_minimum_required(VERSION 3.23)
 project(OpenGL_BasicRendererProject)  # *记得变更项目名
 
 set(CMAKE_CXX_STANDARD 23)  # *选择C++版本
+set(CMAKE_C_STANDARD 23)    # *选择C版本
 
 # *添加额外头文件（记得更改项目名）
 set(INC_DIR
         ${OpenGL_BasicRendererProject}dependencies/GLFW/include
         ${OpenGL_BasicRendererProject}dependencies/GLEW/include
+        ${OpenGL_BasicRendererProject}dependencies/GLAD/include
         )
 # *添加额外库（记得更改项目名）
 set(LINK_DIR
@@ -23,9 +25,17 @@ link_directories(
 )
 
 # *定向可执行文件（记得变更项目名）
-add_executable(
-        OpenGL_BasicRendererProject src/Application.cpp
-        src/CompilerExtension.h)
+add_executable(OpenGL_BasicRendererProject
+        # *GLAD dependencies
+
+        # *GLEW dependencies
+
+        # *GLFW dependencies
+
+        # *Project files
+        src/Application.cpp
+        src/CompilerExtension.h
+)
 
 # *读取库地址（记得变更项目名）
 target_link_libraries(

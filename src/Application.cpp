@@ -1,6 +1,8 @@
 // * OpenGL header files
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+// * OpenGL explicit define
+#define GLEW_STATIC
 
 // * C++ Standard Library header files
 # include <iostream>

@@ -49,7 +49,7 @@ build cmake_object_order_depends_target_OpenGL_BasicRendererProject: phony || CM
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/Application.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
