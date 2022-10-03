@@ -51,6 +51,9 @@ add_executable(OpenGL_BasicRendererProject
 
         src/VertexBufferLayout.cpp
         src/VertexBufferLayout.h
+
+        src/Shader.cpp
+        src/Shader.h
         )
 
 # *读取库地址（记得变更项目名）

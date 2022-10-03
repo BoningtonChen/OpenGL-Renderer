@@ -88,6 +88,13 @@ build CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o: C
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
+build CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Debug /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/Shader.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
+  DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target OpenGL_BasicRendererProject
@@ -96,7 +103,7 @@ build CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o: C
 #############################################
 # Link the executable OpenGL_BasicRendererProject
 
-build OpenGL_BasicRendererProject: CXX_EXECUTABLE_LINKER__OpenGL_BasicRendererProject_Debug CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBuffer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/IndexBuffer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexArray.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o
+build OpenGL_BasicRendererProject: CXX_EXECUTABLE_LINKER__OpenGL_BasicRendererProject_Debug CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBuffer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/IndexBuffer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexArray.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/lib -Wl,-rpath,/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/lib  -lglfw.3  -lglfw3  -lGLEW.2.1.0  -lGLEW.2.1  -lGLEW  -lpthread  -framework OpenGL  -framework GLUT
   LINK_PATH = -L/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/lib   -L/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/lib

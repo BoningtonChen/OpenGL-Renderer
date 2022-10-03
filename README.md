@@ -5,7 +5,8 @@
 * [OpenGL Simple Renderer Project](#opengl-simple-renderer-project)
   * [Description](#description)
   * [Project Structure](#project-structure)
-    * [Comments](#comments)
+  * [Comments](#comments)
+  * [Building Tools](#building-tools)
 <!-- TOC -->
 
 ## Description
@@ -34,14 +35,28 @@
 - README.md
 - CMakeLists.txt
 
-### Comments
-- Application.cpp file: \
+## Comments
+- Application.cpp : \
 Main Entrance of the Console Application.
-- CompilerExtension.h: \
+- CompilerExtension.h : \
 Cross-Platform Compiler Extensions, include a simulated MSVC __debugbreak() compiler function and so.
-- Renderer.h / Renderer.cpp: \
+- Renderer.h / Renderer.cpp : \
 Definitions and Implementation methods of GLLogCall() functions and so.
-- IndexBuffer.h / IndexBuffer.cpp: \
+- IndexBuffer.h / IndexBuffer.cpp : \
 Definitions and Implementation methods of IndexBuffer.
-- VertexBuffer.h / VertexBuffer.cpp: \
+- VertexBuffer.h / VertexBuffer.cpp : \
   Definitions and Implementation methods of VertexBuffer.
+- Shader.h / Shader.cpp: \
+Definitions and Implementation methods of Shader-related types, including ShaderProgramSource and so.
+
+## Building Tools
+- Developing Tools
+  - JetBrains CLion
+  - SnippetsLab
+  - Ninja
+  - CMake
+- Version Control
+  - GitLink
+  - GitHub
+- References
+  - Dash
