@@ -40,14 +40,16 @@
 Main Entrance of the Console Application.
 - CompilerExtension.h : \
 Cross-Platform Compiler Extensions, include a simulated MSVC __debugbreak() compiler function and so.
-- Renderer.h / Renderer.cpp : \
+- GLErrorDisposition.h / GLErrorDisposition.cpp : \
 Definitions and Implementation methods of GLLogCall() functions and so.
 - IndexBuffer.h / IndexBuffer.cpp : \
 Definitions and Implementation methods of IndexBuffer.
 - VertexBuffer.h / VertexBuffer.cpp : \
   Definitions and Implementation methods of VertexBuffer.
-- Shader.h / Shader.cpp: \
+- Shader.h / Shader.cpp : \
 Definitions and Implementation methods of Shader-related types, including ShaderProgramSource and so.
+- Renderer.h / Renderer.cpp : \
+Definitions and Implementation method of Renderer type.
 
 ## Building Tools
 - Developing Tools
