@@ -1,11 +1,17 @@
 # ninja log v5
-15	4075	1664764150280307720	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
+17	5097	1664771563095848419	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	5fb08fc7e61281f9
 18	1297	1664764028040438095	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLAD/src/glad.c.o	bd30bb7f44e500b6
 20	2920	1664764029706734822	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLEW/src/glew.c.o	7b0f7f6d7e611fe1
-13	162	1664764247075129445	OpenGL_BasicRendererProject	627052240df624cf
+5098	5381	1664771563386667540	OpenGL_BasicRendererProject	627052240df624cf
 1297	1670	1664764028462280038	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLEW/src/visualinfo.c.o	a961cba9358b4dd6
 0	1316	1664450293921152648	CMakeFiles/OpenGL_BasicRendererProject.dir/main.cpp.o	69a1fd3ac16cb1b3
-1	197	1664764981740273860	build.ninja	7c2ec44ce86e83bc
+1	197	1664771575316266363	build.ninja	7c2ec44ce86e83bc
 22	2317	1664764029105604019	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLEW/src/glewinfo.c.o	f69241f9b3db52c9
-16	2979	1664765834631846874	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
-2979	3175	1664765834835598375	OpenGL_BasicRendererProject	627052240df624cf
+20	4198	1664771725968167654	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
+4199	4383	1664771726165288503	OpenGL_BasicRendererProject	627052240df624cf
+25	3706	1664771812663967220	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
+3707	3917	1664771812882330794	OpenGL_BasicRendererProject	627052240df624cf
+14	4185	1664771886963341445	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
+4185	4380	1664771887163948970	OpenGL_BasicRendererProject	627052240df624cf
+22	5089	1664786744942366637	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
+5089	5331	1664786745197015502	OpenGL_BasicRendererProject	627052240df624cf
