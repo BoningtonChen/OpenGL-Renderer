@@ -35,7 +35,8 @@ add_executable(OpenGL_BasicRendererProject
         # *Project files
         src/Application.cpp
         src/CompilerExtension.h
-)
+        src/Renderer.cpp src/Renderer.h
+        src/VertexBuffer.cpp src/VertexBuffer.h src/IndexBuffer.cpp src/IndexBuffer.h)
 
 # *读取库地址（记得变更项目名）
 target_link_libraries(

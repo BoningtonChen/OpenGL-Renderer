@@ -24,6 +24,8 @@
 - src
   - Application.cpp
   - CompilerExtension.h
+  - Renderer.h
+  - Renderer.cpp
 - .gitignore
 - README.md
 - CMakeLists.txt
@@ -33,3 +35,5 @@
 Main Entrance of the Console Application.
 - CompilerExtension.h: \
 Cross-Platform Compiler Extensions, include a simulated MSVC __debugbreak() compiler function and so.
+- Renderer.h/Renderer.cpp: \
+Definitions and Implementation methods of GLLogCall() functions and so.

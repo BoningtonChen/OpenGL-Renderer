@@ -1,6 +1,7 @@
 // * OpenGL header files
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+
 // * OpenGL explicit define
 #define GLEW_STATIC
 
@@ -12,24 +13,13 @@
 
 // * Project Header files
 #include "CompilerExtension.h"
-
-static void GLClearError()
-{
-    while (glGetError() != GL_NO_ERROR);
-}
-
-static bool GLLogCall(const char* function, const char* file, int line)
-{
-    while ( GLenum error = glGetError() )
-    {
-        std::cout << "[OpenGL ERROR]" << "(" << error << "): " << "ISSUE Occurred in Function/Method: " << function << ", From: " << file << ", Line: " << line << std::endl;
-        return false;
-    }
-    return true;
-}
+#include "Renderer.h"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 // ! 宏状态定义切换
 #define SHADER_PARSE_STATUS_CHECK 1
+#define MAIN_ARGS_RETRIEVE 1
 
 struct ShaderProgramSource
 {
@@ -154,91 +144,88 @@ int main(int argc, char* argv[], char **env)
     // ! 输出 OpenGL(GLSL) 版本
     std::cout<< "OpenGL & Graphics Card Driver Version: " << glGetString(GL_VERSION) << std::endl;
 
-    // ! OpenGL 准备工作
-    float positions[] = {
-            -0.5f, -0.5f,
-            +0.5f, -0.5f,
-            +0.5f, +0.5f,
-            -0.5f, +0.5f
-    };
+    // ! 创建一个主函数内作用域，用于离开时在栈上销毁分配数据，阻止glfwTerminate()函数销毁OpenGL上下文时循环返回一个glError
+    {
+        // ! OpenGL 准备工作
+        float positions[] = {
+                -0.5f, -0.5f,
+                +0.5f, -0.5f,
+                +0.5f, +0.5f,
+                -0.5f, +0.5f
+        };
 
-    unsigned int indices[] = {
-            0, 1, 2,
-            2, 3, 0
-    };
+        unsigned int indices[] = {
+                0, 1, 2,
+                2, 3, 0
+        };
 
-    unsigned int vao;
-    GLCall( glGenVertexArrays(1, &vao) );
-    GLCall( glBindVertexArray(vao) );
+        unsigned int vao;
+        GLCall(glGenVertexArrays(1, &vao));
+        GLCall(glBindVertexArray(vao));
 
-    unsigned int buffer;
-    GLCall( glGenBuffers(1, &buffer) );
-    GLCall( glBindBuffer(GL_ARRAY_BUFFER, buffer) );
-    GLCall( glBufferData(GL_ARRAY_BUFFER, sizeof positions, positions, GL_STATIC_DRAW) );
+        VertexBuffer vb(positions, sizeof positions);
 
-    GLCall( glEnableVertexAttribArray(0) );
-    GLCall( glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0) );
+        GLCall(glEnableVertexAttribArray(0));
+        GLCall(glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0));
 
-    unsigned int ibo;   // index buffer object
-    GLCall( glGenBuffers(1, &ibo) );
-    GLCall( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo) );
-    GLCall( glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof ibo, indices, GL_STATIC_DRAW) );
+        IndexBuffer ib(indices, 6);
 
-    ShaderProgramSource source = ParseShader("../res/shaders/Basic.shader");
+        ShaderProgramSource source = ParseShader("../res/shaders/Basic.shader");
 #if SHADER_PARSE_STATUS_CHECK
-    std::cout << "[VERTEX Shader]:" << std::endl;
-    std::cout << source.VertexSource << std::endl;
-    std::cout << "[FRAGMENT Shader]:" << std::endl;
-    std::cout << source.FragmentSource << std::endl;
+        std::cout << "[VERTEX Shader]:" << std::endl;
+        std::cout << source.VertexSource << std::endl;
+        std::cout << "[FRAGMENT Shader]:" << std::endl;
+        std::cout << source.FragmentSource << std::endl;
 #endif
 
-    unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
-    // GLCall( glUseProgram(shader) );
+        unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
+        // GLCall( glUseProgram(shader) );
 
-    GLCall( int location = glGetUniformLocation(shader, "u_Color") );
-    ASSERT(location  != -1);
-    GLCall( glUniform4f(location, 0.2f, 0.3f, 0.8f, 1.0f) );
+        GLCall(int location = glGetUniformLocation(shader, "u_Color"));
+        ASSERT(location != -1);
+        GLCall(glUniform4f(location, 0.2f, 0.3f, 0.8f, 1.0f));
 
-    GLCall( glBindVertexArray(0) );
-    GLCall( glUseProgram(0) );
-    GLCall( glBindBuffer(GL_ARRAY_BUFFER, 0) );
-    GLCall( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0) );
+        GLCall(glBindVertexArray(0));
+        GLCall(glUseProgram(0));
+        GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
+        GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
 
-    float r = 0.0f;
-    float increment = 0.05f;
+        float r = 0.0f;
+        float increment = 0.05f;
 
-    // ! 循环当前窗口
-    while ( !glfwWindowShouldClose(window) )
-    {
-        // ! 在此处渲染内容
-        glClear(GL_COLOR_BUFFER_BIT);
+        // ! 循环当前窗口
+        while (!glfwWindowShouldClose(window)) {
+            // ! 在此处渲染内容
+            glClear(GL_COLOR_BUFFER_BIT);
 
-        GLCall( glUseProgram(shader) );
-        GLCall( glUniform4f(location, 0.2f, r, 0.8f, 1.0f) );
+            GLCall(glUseProgram(shader));
+            GLCall(glUniform4f(location, 0.2f, r, 0.8f, 1.0f));
 
-        GLCall( glBindVertexArray(vao) );
-        GLCall( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo) );
+            GLCall(glBindVertexArray(vao));
+            ib.Bind();
 
-        GLCall( glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr) );
+            GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
 
-        if (r > 1.0f)
-            increment = -0.05f;
-        else if (r < 0.0f)
-            increment = 0.05f;
-        r += increment;
+            if (r > 1.0f)
+                increment = -0.05f;
+            else if (r < 0.0f)
+                increment = 0.05f;
+            r += increment;
 
-        // ! 交换前后端 buffer
-        glfwSwapBuffers(window);
+            // ! 交换前后端 buffer
+            glfwSwapBuffers(window);
 
-        // ! 推出项目
-        glfwPollEvents();
+            // ! 推出项目
+            glfwPollEvents();
+        }
+
+        GLCall(glDeleteProgram(shader));
     }
 
-    GLCall( glDeleteProgram(shader) );
-
+    // ! 销毁 OpenGL 上下文
     glfwTerminate();
 
-
+#if MAIN_ARGS_RETRIEVE
     // ! 控制台 console 获取主程序参数
     std::cout << std::endl;
     std::cout << "[Main function Parameters]: " <<std::endl;
@@ -246,6 +233,7 @@ int main(int argc, char* argv[], char **env)
     std::cout << "ARGv Application root: " << argv[0] << std::endl;
     std::cout << "ARGv Pointer to an Array of main-func Parameters: " << argv << std::endl;
     std::cout << "ENVVAR value: " << env << std::endl;
+#endif
 
     return 0;
 }

@@ -1,17 +1,14 @@
 # ninja log v5
-17	5097	1664771563095848419	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	5fb08fc7e61281f9
+50	2928	1664787260536263962	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
 18	1297	1664764028040438095	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLAD/src/glad.c.o	bd30bb7f44e500b6
 20	2920	1664764029706734822	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLEW/src/glew.c.o	7b0f7f6d7e611fe1
-5098	5381	1664771563386667540	OpenGL_BasicRendererProject	627052240df624cf
+2928	3128	1664787260750272564	OpenGL_BasicRendererProject	627052240df624cf
 1297	1670	1664764028462280038	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLEW/src/visualinfo.c.o	a961cba9358b4dd6
 0	1316	1664450293921152648	CMakeFiles/OpenGL_BasicRendererProject.dir/main.cpp.o	69a1fd3ac16cb1b3
-1	197	1664771575316266363	build.ninja	7c2ec44ce86e83bc
+1	197	1664788984046479882	build.ninja	7c2ec44ce86e83bc
 22	2317	1664764029105604019	CMakeFiles/OpenGL_BasicRendererProject.dir/dependencies/GLEW/src/glewinfo.c.o	f69241f9b3db52c9
-20	4198	1664771725968167654	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
-4199	4383	1664771726165288503	OpenGL_BasicRendererProject	627052240df624cf
-25	3706	1664771812663967220	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
-3707	3917	1664771812882330794	OpenGL_BasicRendererProject	627052240df624cf
-14	4185	1664771886963341445	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
-4185	4380	1664771887163948970	OpenGL_BasicRendererProject	627052240df624cf
-22	5089	1664786744942366637	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
-5089	5331	1664786745197015502	OpenGL_BasicRendererProject	627052240df624cf
+49	1327	1664790055206981192	CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBuffer.cpp.o	17f443f6845d63e0
+1327	2071	1664790055952590600	CMakeFiles/OpenGL_BasicRendererProject.dir/src/IndexBuffer.cpp.o	a69f119a21a6c2aa
+47	4911	1664790058784300801	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o	53bdc231fd466160
+44	5740	1664790059615053832	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	cdd1e904b8b1a4b9
+5740	5959	1664790059837210429	OpenGL_BasicRendererProject	1e2f032a7721a17a
