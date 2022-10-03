@@ -26,6 +26,10 @@
   - CompilerExtension.h
   - Renderer.h
   - Renderer.cpp
+  - VertexBuffer.h
+  - VertexBuffer.cpp
+  - IndexBuffer.h
+  - IndexBuffer.cpp
 - .gitignore
 - README.md
 - CMakeLists.txt
@@ -35,5 +39,9 @@
 Main Entrance of the Console Application.
 - CompilerExtension.h: \
 Cross-Platform Compiler Extensions, include a simulated MSVC __debugbreak() compiler function and so.
-- Renderer.h/Renderer.cpp: \
+- Renderer.h / Renderer.cpp: \
 Definitions and Implementation methods of GLLogCall() functions and so.
+- IndexBuffer.h / IndexBuffer.cpp: \
+Definitions and Implementation methods of IndexBuffer.
+- VertexBuffer.h / VertexBuffer.cpp: \
+  Definitions and Implementation methods of VertexBuffer.
