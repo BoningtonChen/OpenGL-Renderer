@@ -9,7 +9,7 @@
 #include <sstream>
 #include <string>
 
-#include "Renderer.h"
+#include "GLErrorDisposition.h"
 
 Shader::Shader(const std::string &filepath)
     :m_Filepath(filepath), m_RendererID(0)

@@ -7,6 +7,8 @@
 
 #endif //OPENGL_BASICRENDERERPROJECT_INDEXBUFFER_H
 
+#pragma once
+
 class IndexBuffer
 {
 private:

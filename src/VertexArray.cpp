@@ -4,7 +4,7 @@
 
 #include "VertexArray.h"
 
-#include "Renderer.h"
+#include "GLErrorDisposition.h"
 
 VertexArray::VertexArray()
 {

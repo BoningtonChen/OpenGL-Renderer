@@ -4,7 +4,7 @@
 
 #include "VertexBuffer.h"
 
-#include "Renderer.h"
+#include "GLErrorDisposition.h"
 
 VertexBuffer::VertexBuffer(const void *data, unsigned int size)
 {

@@ -10,11 +10,15 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <thread>
+#include <future>
 
 // * Project Header files
 #include "CompilerExtension.h"
+#include "GLErrorDisposition.h"
 #include "Renderer.h"
 #include "VertexBuffer.h"
+#include "VertexBufferLayout.h"
 #include "IndexBuffer.h"
 #include "VertexArray.h"
 #include "Shader.h"
@@ -40,7 +44,7 @@ int main(int argc, char* argv[], char **env)
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
     // ! 创建有效的 OpenGL Window 上下文
-    window = glfwCreateWindow(640, 480, "Bonington's OpenGL Renderer Project", nullptr, nullptr);
+    window = glfwCreateWindow(1280, 960, "Bonington's OpenGL Renderer Project", nullptr, nullptr);
     if ( !window )
     {
         glfwTerminate();
@@ -73,10 +77,6 @@ int main(int argc, char* argv[], char **env)
                 2, 3, 0
         };
 
-        unsigned int vao;
-        GLCall(glGenVertexArrays(1, &vao));
-        GLCall(glBindVertexArray(vao));
-
         VertexArray va;
         VertexBuffer vb(positions, sizeof positions);
 
@@ -96,21 +96,21 @@ int main(int argc, char* argv[], char **env)
         vb.Unbind();
         ib.Unbind();
 
+        Renderer renderer;
+
         float r = 0.0f;
         float increment = 0.05f;
 
         // ! 循环当前窗口
         while (!glfwWindowShouldClose(window)) {
+
             // ! 在此处渲染内容
-            glClear(GL_COLOR_BUFFER_BIT);
+            renderer.Clear();
 
             shader.Bind();
             shader.SetUniform4f("u_Color", 0.2f, r, 0.8f, 1.0f);
 
-            va.Bind();
-            ib.Bind();
-
-            GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
+            renderer.Draw(va, ib, shader);
 
             if (r > 1.0f)
                 increment = -0.05f;

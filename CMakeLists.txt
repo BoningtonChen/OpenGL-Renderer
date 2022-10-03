@@ -54,6 +54,8 @@ add_executable(OpenGL_BasicRendererProject
 
         src/Shader.cpp
         src/Shader.h
+        src/GLErrorDisposition.cpp
+        src/GLErrorDisposition.h
         )
 
 # *读取库地址（记得变更项目名）
