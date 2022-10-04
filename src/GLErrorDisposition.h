@@ -10,8 +10,15 @@
 #pragma once
 
 #include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 #include "CompilerExtension.h"
 
+#define ANY GLFW_OPENGL_ANY_PROFILE
+#define COMPAT GLFW_OPENGL_COMPAT_PROFILE
+#define CORE GLFW_OPENGL_CORE_PROFILE
+
 void GLClearError();
 bool GLLogCall(const char* function, const char* file, int line);
+
+void GLHint(int hint, int version_major, int version_minor);

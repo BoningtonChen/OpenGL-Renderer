@@ -24,7 +24,6 @@
 #include "Shader.h"
 
 // ! 宏状态定义切换
-#define SHADER_PARSE_STATUS_CHECK 1
 #define MAIN_ARGS_RETRIEVE 1
 
 
@@ -38,10 +37,7 @@ int main(int argc, char* argv[], char **env)
         return -1;
 
     // * Force set OpenGL Version to 4.1 Core Profile
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    GLHint(CORE, 4, 1);
 
     // ! 创建有效的 OpenGL Window 上下文
     window = glfwCreateWindow(1280, 960, "Bonington's OpenGL Renderer Project", nullptr, nullptr);
@@ -111,6 +107,7 @@ int main(int argc, char* argv[], char **env)
             shader.SetUniform4f("u_Color", 0.2f, r, 0.8f, 1.0f);
 
             renderer.Draw(va, ib, shader);
+
             using namespace std::chrono_literals;
             std::this_thread::sleep_for(50ms);
 
