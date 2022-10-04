@@ -133,9 +133,9 @@ int main(int argc, char* argv[], char **env)
     std::cout << std::endl;
     std::cout << "[Main function Parameters]: " <<std::endl;
     std::cout << "ARGc: " << argc << std::endl;
-    std::cout << "ARGv Application root: " << argv[0] << std::endl;
-    std::cout << "ARGv Pointer to an Array of main-func Parameters: " << argv << std::endl;
-    std::cout << "ENVVAR value: " << env << std::endl;
+    std::cout << "ARGv [Application main root]: " << argv[0] << std::endl;
+    std::cout << "ARGv pointer to [Main-func Parameters]: " << argv << std::endl;
+    std::cout << "ENVVAR pointer: " << env << std::endl;
 #endif
 
     return 0;
