@@ -45,7 +45,11 @@ int main(int argc, char* argv[], char **env)
     GLHint(CORE, 4, 1);
 
     // ! 创建有效的 OpenGL Window 上下文
-    window = glfwCreateWindow(640, 480, "Bonington's OpenGL Renderer Project", nullptr, nullptr);
+    window = glfwCreateWindow(
+            960, 540,
+            "Bonington's OpenGL Renderer Project",
+            nullptr, nullptr
+            );
     if ( !window )
     {
         glfwTerminate();
@@ -67,10 +71,10 @@ int main(int argc, char* argv[], char **env)
     {
         // ! OpenGL 准备工作
         float positions[] = {
-                -0.5f, -0.5f, 0.0f, 0.0f,   // 0
-                +0.5f, -0.5f, 1.0f, 0.0f,   // 1
-                +0.5f, +0.5f, 1.0f, 1.0f,   // 2
-                -0.5f, +0.5f, 0.0f, 1.0f    // 3
+                100.0f, 100.0f, 0.0f, 0.0f,   // 0
+                200.0f, 100.0f, 1.0f, 0.0f,   // 1
+                200.0f, 200.0f, 1.0f, 1.0f,   // 2
+                100.0f, 200.0f, 0.0f, 1.0f    // 3
         };
 
         unsigned int indices[] = {
@@ -91,13 +95,20 @@ int main(int argc, char* argv[], char **env)
 
         IndexBuffer ib(indices, 6);
 
-        glm::mat4 proj = glm::ortho(-2.0f, 2.0f, -1.5f, 1.5f, -1.0f, 1.0f);
+        glm::mat4 projection = glm::ortho(
+                0.0f, 960.0f,
+                0.0f, 540.0f,
+                -1.0f, 1.0f
+                );
+
+        glm::vec4 vp(100.0f, 100.0f, 0.0f, 1.0f);
+        glm::vec4 result = projection * vp;
 
         Shader shader("../res/shaders/Basic.shader");
         shader.Bind();
 
         shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
-        shader.SetUniformMat4f("u_MVP", proj);
+        shader.SetUniformMat4f("u_MVP", projection);
 
         Texture texture("../res/textures/BonityLogo_light.png");
         texture.Bind();
