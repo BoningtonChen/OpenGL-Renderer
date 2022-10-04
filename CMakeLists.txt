@@ -1,21 +1,22 @@
 cmake_minimum_required(VERSION 3.23.2)
 project(OpenGL_BasicRendererProject)  # *记得变更项目名
 
-set(CMAKE_CXX_STANDARD 23)  # *选择C++版本
+set(CMAKE_CXX_STANDARD 14)  # *选择C++版本
 set(CMAKE_C_STANDARD 23)    # *选择C版本
 
 # *添加额外头文件（记得更改项目名）
 set(INC_DIR
-        ${OpenGL_BasicRendererProject}dependencies/GLFW/include/
-        ${OpenGL_BasicRendererProject}dependencies/GLEW/include/
-        ${OpenGL_BasicRendererProject}dependencies/GLAD/include/
+        ${OpenGL_BasicRendererProject}dependencies/GLFW/include
+        ${OpenGL_BasicRendererProject}dependencies/GLEW/include
+        ${OpenGL_BasicRendererProject}dependencies/GLAD/include
 
-        ${OpenGL_BasicRendererProject}vendor/
+        ${OpenGL_BasicRendererProject}vendor/glm
+        ${OpenGL_BasicRendererProject}vendor/stb
         )
 # *添加额外库（记得更改项目名）
 set(LINK_DIR
-        ${OpenGL_BasicRendererProject}dependencies/GLFW/lib/
-        ${OpenGL_BasicRendererProject}dependencies/GLEW/lib/
+        ${OpenGL_BasicRendererProject}dependencies/GLFW/lib
+        ${OpenGL_BasicRendererProject}dependencies/GLEW/lib
         )
 
 # *设置库目录
@@ -29,7 +30,8 @@ link_directories(
 # *定向可执行文件（记得变更项目名）
 add_executable(OpenGL_BasicRendererProject
         # *Vendor dependencies
-        vendor/stb_image/stb_image.h
+        vendor/stb/stb_image/stb_image.h
+        vendor/stb/stb_image/stb_image.cpp
 
         # *GLAD dependencies
 
@@ -59,9 +61,13 @@ add_executable(OpenGL_BasicRendererProject
 
         src/Shader.cpp
         src/Shader.h
+
         src/GLErrorDisposition.cpp
         src/GLErrorDisposition.h
-        vendor/stb_image/stb_image.cpp src/Texture.cpp src/Texture.h)
+
+        src/Texture.cpp
+        src/Texture.h
+        )
 
 # *读取库地址（记得变更项目名）
 target_link_libraries(

@@ -22,6 +22,8 @@
 - res
   - shaders
     - Basic.shader
+  - textures
+    - BonityLogo_dark/light.png
 - vendor
   - stb_image.h
   - stb_image.cpp
@@ -73,7 +75,8 @@ Definitions and Implementation method of Renderer type.
   - Ninja
   - CMake
 - Vendors
-  - stb_image
+  - stb
+  - glm
 - Version Control
   - GitLink
   - GitHub
