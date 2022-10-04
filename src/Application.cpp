@@ -22,6 +22,7 @@
 #include "IndexBuffer.h"
 #include "VertexArray.h"
 #include "Shader.h"
+#include "Texture.h"
 
 // ! 宏状态定义切换
 #define MAIN_ARGS_RETRIEVE 1
@@ -40,7 +41,7 @@ int main(int argc, char* argv[], char **env)
     GLHint(CORE, 4, 1);
 
     // ! 创建有效的 OpenGL Window 上下文
-    window = glfwCreateWindow(1280, 960, "Bonington's OpenGL Renderer Project", nullptr, nullptr);
+    window = glfwCreateWindow(640, 480, "Bonington's OpenGL Renderer Project", nullptr, nullptr);
     if ( !window )
     {
         glfwTerminate();
@@ -62,10 +63,10 @@ int main(int argc, char* argv[], char **env)
     {
         // ! OpenGL 准备工作
         float positions[] = {
-                -0.5f, -0.5f,
-                +0.5f, -0.5f,
-                +0.5f, +0.5f,
-                -0.5f, +0.5f
+                -0.5f, -0.5f, 0.0f, 0.0f,   // 0
+                +0.5f, -0.5f, 1.0f, 0.0f,   // 1
+                +0.5f, +0.5f, 1.0f, 1.0f,   // 2
+                -0.5f, +0.5f, 0.0f, 1.0f    // 3
         };
 
         unsigned int indices[] = {
@@ -73,10 +74,14 @@ int main(int argc, char* argv[], char **env)
                 2, 3, 0
         };
 
+        GLCall( glEnable(GL_BLEND) );
+        GLCall( glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA) );
+
         VertexArray va;
         VertexBuffer vb(positions, sizeof positions);
 
         VertexBufferLayout layout;
+        layout.Push<float>(2);
         layout.Push<float>(2);
         va.AddBuffer(vb, layout);
 
@@ -86,6 +91,10 @@ int main(int argc, char* argv[], char **env)
         shader.Bind();
 
         shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
+
+        Texture texture("../res/textures/BonityLogo_light.png");
+        texture.Bind();
+        shader.SetUniform1i("u_Texture", 0);
 
         va.Unbind();
         shader.Unbind();

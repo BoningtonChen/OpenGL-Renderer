@@ -49,56 +49,70 @@ build cmake_object_order_depends_target_OpenGL_BasicRendererProject: phony || CM
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/Application.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/Renderer.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBuffer.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/VertexBuffer.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBuffer.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/IndexBuffer.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/IndexBuffer.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/IndexBuffer.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexArray.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/VertexArray.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexArray.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/VertexBufferLayout.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/Shader.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
 build CMakeFiles/OpenGL_BasicRendererProject.dir/src/GLErrorDisposition.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/GLErrorDisposition.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
   DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/GLErrorDisposition.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
+  OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
+
+build CMakeFiles/OpenGL_BasicRendererProject.dir/vendor/stb_image/stb_image.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor/stb_image/stb_image.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
+  DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/vendor/stb_image/stb_image.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
+  OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/vendor/stb_image
+
+build CMakeFiles/OpenGL_BasicRendererProject.dir/src/Texture.cpp.o: CXX_COMPILER__OpenGL_BasicRendererProject_Release /Users/bonington/CLionProjects/OpenGL_BasicRendererProject/src/Texture.cpp || cmake_object_order_depends_target_OpenGL_BasicRendererProject
+  DEP_FILE = CMakeFiles/OpenGL_BasicRendererProject.dir/src/Texture.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
+  INCLUDES = -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLAD/include -I/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/vendor
   OBJECT_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGL_BasicRendererProject.dir/src
 
@@ -110,7 +124,7 @@ build CMakeFiles/OpenGL_BasicRendererProject.dir/src/GLErrorDisposition.cpp.o: C
 #############################################
 # Link the executable OpenGL_BasicRendererProject
 
-build OpenGL_BasicRendererProject: CXX_EXECUTABLE_LINKER__OpenGL_BasicRendererProject_Release CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBuffer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/IndexBuffer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexArray.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/GLErrorDisposition.cpp.o
+build OpenGL_BasicRendererProject: CXX_EXECUTABLE_LINKER__OpenGL_BasicRendererProject_Release CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBuffer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/IndexBuffer.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexArray.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/GLErrorDisposition.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/vendor/stb_image/stb_image.cpp.o CMakeFiles/OpenGL_BasicRendererProject.dir/src/Texture.cpp.o
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/lib -Wl,-rpath,/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/lib  -lglfw.3  -lglfw3  -lGLEW.2.1.0  -lGLEW.2.1  -lGLEW  -lpthread  -framework OpenGL  -framework GLUT
   LINK_PATH = -L/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLFW/lib   -L/Users/bonington/CLionProjects/OpenGL_BasicRendererProject/dependencies/GLEW/lib

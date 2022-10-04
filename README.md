@@ -22,15 +22,26 @@
 - res
   - shaders
     - Basic.shader
+- vendor
+  - stb_image.h
+  - stb_image.cpp
 - src
   - Application.cpp
   - CompilerExtension.h
+  - GLErrorDisposition.h
+  - GLErrorDisposition.cpp
   - Renderer.h
   - Renderer.cpp
   - VertexBuffer.h
   - VertexBuffer.cpp
+  - VertexBufferLayout.h
+  - VertexBufferLayout.cpp
   - IndexBuffer.h
   - IndexBuffer.cpp
+  - Shader.h
+  - Shader.cpp
+  - Texture.h
+  - Texture.cpp
 - .gitignore
 - README.md
 - CMakeLists.txt
@@ -46,10 +57,14 @@ Definitions and Implementation methods of GLLogCall() functions and so.
 Definitions and Implementation methods of IndexBuffer.
 - VertexBuffer.h / VertexBuffer.cpp : \
   Definitions and Implementation methods of VertexBuffer.
+- VertexBufferLayout.h / VertexBufferLayout.cpp : \
+  Definitions and Implementation methods of VertexBufferLayout.
 - Shader.h / Shader.cpp : \
 Definitions and Implementation methods of Shader-related types, including ShaderProgramSource and so.
 - Renderer.h / Renderer.cpp : \
 Definitions and Implementation method of Renderer type.
+- Texture.h / Texture.cpp : \
+  Definitions and Implementation method of Texture type.
 
 ## Building Tools
 - Developing Tools
@@ -57,6 +72,8 @@ Definitions and Implementation method of Renderer type.
   - SnippetsLab
   - Ninja
   - CMake
+- Vendors
+  - stb_image
 - Version Control
   - GitLink
   - GitHub
