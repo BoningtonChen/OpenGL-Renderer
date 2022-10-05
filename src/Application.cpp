@@ -75,10 +75,10 @@ int main(int argc, char* argv[], char **env)
     {
         // ! OpenGL 准备工作
         float positions[] = {
-                100.0f, 100.0f, 0.0f, 0.0f,   // 0
-                200.0f, 100.0f, 1.0f, 0.0f,   // 1
-                200.0f, 200.0f, 1.0f, 1.0f,   // 2
-                100.0f, 200.0f, 0.0f, 1.0f    // 3
+                -50.0f, -50.0f, 0.0f, 0.0f,   // 0
+                50.0f, -50.0f, 1.0f, 0.0f,   // 1
+                50.0f, 50.0f, 1.0f, 1.0f,   // 2
+                -50.0f, 50.0f, 0.0f, 1.0f    // 3
         };
 
         unsigned int indices[] = {
@@ -106,7 +106,7 @@ int main(int argc, char* argv[], char **env)
                 );
         glm::mat4 view = glm::translate(
                 glm::mat4(1.0f),
-                glm::vec3(-100, 0, 0)
+                glm::vec3(0, 0, 0)
                 );
 
         Shader shader("../res/shaders/Basic.shader");
@@ -136,7 +136,8 @@ int main(int argc, char* argv[], char **env)
 
         float r = 0.0f;
         float increment = 0.05f;
-        glm::vec3 translation(200, 200, 0);
+        glm::vec3 translationA(200, 200, 0);
+        glm::vec3 translationB(400, 200, 0);
 
         // ! 循环当前窗口
         while (!glfwWindowShouldClose(window)) {
@@ -149,16 +150,29 @@ int main(int argc, char* argv[], char **env)
             ImGui_ImplGlfw_NewFrame();
             ImGui::NewFrame();
 
-            glm::mat4 model = glm::translate(
-                    glm::mat4(1.0f), translation
-                    );
-            glm::mat4 mvp = projection * view * model;
+            // shader.SetUniform4f("u_Color", 0.2f, r, 0.8f, 1.0f);
 
-            shader.Bind();
-            shader.SetUniform4f("u_Color", 0.2f, r, 0.8f, 1.0f);
-            shader.SetUniformMat4f("u_MVP", mvp);
+            // * DrawCall A
+            {
+                glm::mat4 model = glm::translate(
+                        glm::mat4(1.0f), translationA
+                );
+                glm::mat4 mvp = projection * view * model;
+                shader.Bind();
+                shader.SetUniformMat4f("u_MVP", mvp);
+                renderer.Draw(va, ib, shader);
+            }
 
-            renderer.Draw(va, ib, shader);
+            // * DrawCall B
+            {
+                glm::mat4 model = glm::translate(
+                        glm::mat4(1.0f), translationB
+                );
+                glm::mat4 mvp = projection * view * model;
+                shader.Bind();
+                shader.SetUniformMat4f("u_MVP", mvp);
+                renderer.Draw(va, ib, shader);
+            }
 
             using namespace std::chrono_literals;
             std::this_thread::sleep_for(50ms);
@@ -171,8 +185,10 @@ int main(int argc, char* argv[], char **env)
 
             // ! ImGui 监视窗口
             {
-                ImGui::Begin("ImGui Monitor");
-                ImGui::SliderFloat3("Translation", &translation.x, 0.0f, 960.0f);
+                ImGui::Begin("ImGui DeBug Monitor");
+                ImGui::SliderFloat3("Translation A", &translationA.x, 0.0f, 960.0f);
+                ImGui::SliderFloat3("Translation B", &translationB.x, 0.0f, 960.0f);
+
                 ImGui::Text(
                         "Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate,
                         ImGui::GetIO().Framerate
@@ -181,7 +197,7 @@ int main(int argc, char* argv[], char **env)
             }
 
             ImGui::Render();
-            ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+            ImGui_ImplOpenGL3_RenderDrawData( ImGui::GetDrawData() );
 
             // ! 交换前后端 buffer
             glfwSwapBuffers(window);
