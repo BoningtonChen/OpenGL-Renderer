@@ -17,6 +17,10 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_glfw.h"
+#include "imgui/imgui_impl_opengl3.h"
+
 // * Project Header files
 #include "CompilerExtension.h"
 #include "GLErrorDisposition.h"
@@ -128,14 +132,32 @@ int main(int argc, char* argv[], char **env)
 
         Renderer renderer;
 
+        ImGui::CreateContext();
+        ImGui_ImplGlfw_InitForOpenGL(window, true);
+        ImGui::StyleColorsDark();
+
+        // 需要指定glsl版本, 也就是shader中的version
+        const char* glsl_version = "#version 330";
+        ImGui_ImplOpenGL3_Init(glsl_version);
+
         float r = 0.0f;
         float increment = 0.05f;
+        glm::vec3 translation(200, 200, 0);
 
         // ! 循环当前窗口
         while (!glfwWindowShouldClose(window)) {
 
             // ! 在此处渲染内容
             renderer.Clear();
+
+            ImGui_ImplOpenGL3_NewFrame();
+            ImGui_ImplGlfw_NewFrame();
+            ImGui::NewFrame();
+
+            glm::mat4 model = glm::translate(
+                    glm::mat4(1.0f), translation
+                    );
+            glm::mat4 mvp = projection * view * model;
 
             shader.Bind();
             shader.SetUniform4f("u_Color", 0.2f, r, 0.8f, 1.0f);
@@ -151,6 +173,19 @@ int main(int argc, char* argv[], char **env)
                 increment = 0.05f;
             r += increment;
 
+            {
+                ImGui::Begin("ImGui Monitor");
+                ImGui::SliderFloat3("Translation", &translation.x, 0.0f, 960.0f);
+                ImGui::Text(
+                        "Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate,
+                        ImGui::GetIO().Framerate
+                        );
+                ImGui::End();
+            }
+
+            ImGui::Render();
+            ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
             // ! 交换前后端 buffer
             glfwSwapBuffers(window);
 
@@ -158,6 +193,12 @@ int main(int argc, char* argv[], char **env)
             glfwPollEvents();
         }
     }
+
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
+
+    glfwDestroyWindow(window);
 
     // ! 销毁 OpenGL 上下文
     glfwTerminate();

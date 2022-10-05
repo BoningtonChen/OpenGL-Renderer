@@ -12,6 +12,7 @@ set(INC_DIR
 
         ${OpenGL_BasicRendererProject}vendor/glm
         ${OpenGL_BasicRendererProject}vendor/stb
+        ${OpenGL_BasicRendererProject}vendor/imgui
         )
 # *添加额外库（记得更改项目名）
 set(LINK_DIR
@@ -33,6 +34,35 @@ add_executable(OpenGL_BasicRendererProject
         vendor/stb/stb_image/stb_image.h
         vendor/stb/stb_image/stb_image.cpp
 
+        vendor/imgui/imgui/imconfig.h
+
+        vendor/imgui/imgui/imgui.cpp
+        vendor/imgui/imgui/imgui.h
+
+        vendor/imgui/imgui/imgui_demo.cpp
+
+        vendor/imgui/imgui/imgui_draw.cpp
+
+        vendor/imgui/imgui/imgui_impl_glfw.h
+        vendor/imgui/imgui/imgui_impl_glfw.cpp
+
+        vendor/imgui/imgui/imgui_impl_glut.h
+        vendor/imgui/imgui/imgui_impl_glut.cpp
+
+        vendor/imgui/imgui/imgui_impl_opengl3.h
+        vendor/imgui/imgui/imgui_impl_opengl3.cpp
+        vendor/imgui/imgui/imgui_impl_opengl3_loader.h
+
+        vendor/imgui/imgui/imgui_internal.h
+
+        vendor/imgui/imgui/imgui_tables.cpp
+
+        vendor/imgui/imgui/imgui_widgets.cpp
+
+        vendor/imgui/imgui/imstb_rectpack.h
+        vendor/imgui/imgui/imstb_textedit.h
+        vendor/imgui/imgui/imstb_truetype.h
+        vendor/imgui/imgui/imstb_truetype.h
         # *GLAD dependencies
 
         # *GLEW dependencies
