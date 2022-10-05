@@ -108,18 +108,11 @@ int main(int argc, char* argv[], char **env)
                 glm::mat4(1.0f),
                 glm::vec3(-100, 0, 0)
                 );
-        glm::mat4 model = glm::translate(
-                glm::mat4(1.0f),
-                glm::vec3(200, 200, 0)
-                );
-
-        glm::mat4 mvp = projection * view * model;
 
         Shader shader("../res/shaders/Basic.shader");
         shader.Bind();
 
         shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
-        shader.SetUniformMat4f("u_MVP", mvp);
 
         Texture texture("../res/textures/BonityLogo_light.png");
         texture.Bind();
@@ -140,6 +133,7 @@ int main(int argc, char* argv[], char **env)
         const char* glsl_version = "#version 330";
         ImGui_ImplOpenGL3_Init(glsl_version);
 
+
         float r = 0.0f;
         float increment = 0.05f;
         glm::vec3 translation(200, 200, 0);
@@ -150,6 +144,7 @@ int main(int argc, char* argv[], char **env)
             // ! 在此处渲染内容
             renderer.Clear();
 
+            // * 新建一个 ImGui 上下文，用于生成监视窗口
             ImGui_ImplOpenGL3_NewFrame();
             ImGui_ImplGlfw_NewFrame();
             ImGui::NewFrame();
@@ -161,6 +156,7 @@ int main(int argc, char* argv[], char **env)
 
             shader.Bind();
             shader.SetUniform4f("u_Color", 0.2f, r, 0.8f, 1.0f);
+            shader.SetUniformMat4f("u_MVP", mvp);
 
             renderer.Draw(va, ib, shader);
 
@@ -173,6 +169,7 @@ int main(int argc, char* argv[], char **env)
                 increment = 0.05f;
             r += increment;
 
+            // ! ImGui 监视窗口
             {
                 ImGui::Begin("ImGui Monitor");
                 ImGui::SliderFloat3("Translation", &translation.x, 0.0f, 960.0f);
@@ -194,6 +191,7 @@ int main(int argc, char* argv[], char **env)
         }
     }
 
+    // ! 停止并销毁 ImGui 窗口
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
