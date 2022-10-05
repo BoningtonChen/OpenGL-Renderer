@@ -6,18 +6,21 @@ set(CMAKE_C_STANDARD 23)    # *选择C版本
 
 # *添加额外头文件（记得更改项目名）
 set(INC_DIR
-        ${OpenGL_BasicRendererProject}dependencies/GLFW/include
-        ${OpenGL_BasicRendererProject}dependencies/GLEW/include
-        ${OpenGL_BasicRendererProject}dependencies/GLAD/include
+        ${OpenGL_BasicRendererProject}dependencies/GLFW/include/
+        ${OpenGL_BasicRendererProject}dependencies/GLEW/include/
+        ${OpenGL_BasicRendererProject}dependencies/GLAD/include/
 
-        ${OpenGL_BasicRendererProject}vendor/glm
-        ${OpenGL_BasicRendererProject}vendor/stb
-        ${OpenGL_BasicRendererProject}vendor/imgui
+        ${OpenGL_BasicRendererProject}vendor/glm/
+        ${OpenGL_BasicRendererProject}vendor/stb/
+        ${OpenGL_BasicRendererProject}vendor/imgui/
+
+        ${OpenGL_BasicRendererProject}src/
+        ${OpenGL_BasicRendererProject}tests/
         )
 # *添加额外库（记得更改项目名）
 set(LINK_DIR
-        ${OpenGL_BasicRendererProject}dependencies/GLFW/lib
-        ${OpenGL_BasicRendererProject}dependencies/GLEW/lib
+        ${OpenGL_BasicRendererProject}dependencies/GLFW/lib/
+        ${OpenGL_BasicRendererProject}dependencies/GLEW/lib/
         )
 
 # *设置库目录
@@ -97,7 +100,9 @@ add_executable(OpenGL_BasicRendererProject
 
         src/Texture.cpp
         src/Texture.h
-        )
+
+        tests/Test.h
+        tests/TestClearColor.cpp tests/TestClearColor.h)
 
 # *读取库地址（记得变更项目名）
 target_link_libraries(
