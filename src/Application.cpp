@@ -100,27 +100,44 @@ int main(int argc, char* argv[], char **env)
         ImGui_ImplGlfw_InitForOpenGL(window, true);
         ImGui::StyleColorsDark();
 
-        test::TestClearColor test;
-
         // * 需要指定glsl版本, 也就是shader中的version
         const char* glsl_version = "#version 330";
         ImGui_ImplOpenGL3_Init(glsl_version);
 
+        test::Test* currentTest = nullptr;
+        auto* testMenu = new test::TestMenu(currentTest);
+        currentTest = testMenu;
+
+        testMenu -> RegisterTest<test::TestClearColor>("Clear Color");
+
+
         // ! 循环当前窗口
-        while (!glfwWindowShouldClose(window)) {
-
+        while (!glfwWindowShouldClose(window))
+        {
             // ! 在此处渲染内容
+            renderer.SetClearColor(Color::BLACK);
             renderer.Clear();
-
-            test.OnUpdate(0.0f);
-            test.OnRender();
 
             // * 新建一个 ImGui 上下文，用于生成监视窗口
             ImGui_ImplOpenGL3_NewFrame();
             ImGui_ImplGlfw_NewFrame();
             ImGui::NewFrame();
 
-            test.OnImGuiRender();
+            if (currentTest)
+            {
+                currentTest -> OnUpdate(0.0f);
+                currentTest -> OnRender();
+                ImGui::Begin("Test");
+
+                if ( currentTest != testMenu && ImGui::Button("<-") )
+                {
+                    delete currentTest;
+                    currentTest = testMenu;
+                }
+                currentTest -> OnImGuiRender();
+
+                ImGui::End();
+            }
 
             ImGui::Render();
             ImGui_ImplOpenGL3_RenderDrawData( ImGui::GetDrawData() );
@@ -131,6 +148,9 @@ int main(int argc, char* argv[], char **env)
             // ! 推出项目
             glfwPollEvents();
         }
+        delete currentTest;
+        if (currentTest != testMenu)
+            delete testMenu;
     }
 
     // ! 停止并销毁 ImGui 窗口

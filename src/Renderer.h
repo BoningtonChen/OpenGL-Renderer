@@ -9,14 +9,24 @@
 
 #pragma once
 
+#include <array>
+
+#include <GL/glew.h>
+
 #include "GLErrorDisposition.h"
 #include "VertexArray.h"
 #include "IndexBuffer.h"
 #include "Shader.h"
 
+
+enum struct Color
+{
+    BLACK
+};
 class Renderer
 {
 public:
     void Clear() const;
+    void SetClearColor(Color color) const;
     void Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const;
 };

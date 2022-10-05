@@ -102,7 +102,7 @@ add_executable(OpenGL_BasicRendererProject
         src/Texture.h
 
         tests/Test.h
-        tests/TestClearColor.cpp tests/TestClearColor.h)
+        tests/TestClearColor.cpp tests/TestClearColor.h tests/Test.cpp)
 
 # *读取库地址（记得变更项目名）
 target_link_libraries(

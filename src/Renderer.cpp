@@ -9,6 +9,15 @@ void Renderer::Clear() const
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
+void Renderer::SetClearColor(Color color) const
+{
+    switch(color)
+    {
+        case Color::BLACK: // BLACK
+            GLCall( glClearColor(0.0f, 0.0f, 0.0f, 1.0f) );
+    }
+}
+
 void Renderer::Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const
 {
     shader.Bind();

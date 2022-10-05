@@ -13,6 +13,7 @@
 - A Basic Modern OpenGL Renderer Project.
 - Using C++ 23, C 23, OpenGL Version 3.3 && 4.1, as well as GLSL Version 330 core.
 - Cross-platform, Support both Windows, macOS and Linux.
+- The Project include some Basic OpenGL Renderer Classes and necessary extensions for cross-platform compilers, as well as extraordinary Third-party dependencies, test frameworks and so.
 
 ## Project Structure
 - dependencies
@@ -70,7 +71,9 @@ Definitions and Implementation method of Renderer type.
 - Texture.h / Texture.cpp : \
   Definitions and Implementation method of Texture type.
 - Test.h : \
-Fundamental Test Namespace and Class.
+A Fundamental Test Namespace and Class.
+- TestClearColor.h / TestClearColor.cpp : \
+A basic Clear pure color test framework, based on ImGui.
 
 ## Building Tools
 - Developing Tools
