@@ -30,6 +30,9 @@
   - stb_image.cpp
 - tests
   - Test.h
+  - Test.cpp
+  - TestClearColor.h
+  - TestClearColor.cpp
 - src
   - Application.cpp
   - CompilerExtension.h
@@ -70,7 +73,7 @@ Definitions and Implementation methods of Shader-related types, including Shader
 Definitions and Implementation method of Renderer type.
 - Texture.h / Texture.cpp : \
   Definitions and Implementation method of Texture type.
-- Test.h : \
+- Test.h / Test.cpp : \
 A Fundamental Test Namespace and Class.
 - TestClearColor.h / TestClearColor.cpp : \
 A basic Clear pure color test framework, based on ImGui.
