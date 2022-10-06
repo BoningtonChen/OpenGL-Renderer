@@ -21,4 +21,4 @@
 void GLClearError();
 bool GLLogCall(const char* function, const char* file, int line);
 
-void GLHint(int hint, int version_major, int version_minor);
+void GLHint(int profile, int version_major, int version_minor);

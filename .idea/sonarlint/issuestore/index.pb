@@ -9,8 +9,6 @@ G
 src/CompilerExtension.h,b/5/b54646d76bdd1303fb687bf162e4452fa3f427fd
 V
 &dependencies/GLFW/include/GLFW/glfw3.h,0/b/0b0d2fbc26cb92a9442149dbc6ed8dac9e4e7321
-J
-src/GLErrorDisposition.cpp,c/7/c73cd27fb0afc0311a97f4d6b5cccf2f0fdc9a1b
 P
  vendor/stb/stb_image/stb_image.h,3/8/3878b7f66de0131e4dad7d798828c03b3217761e
 R
@@ -311,8 +309,6 @@ $vendor/glm/glm/vector_relational.hpp,0/3/0395160b94f7925629a51c00e55b27c5156e9
 src/Shader.h,d/4/d48112de16a6ef13dc30ebb25561e5af05a0b805
 J
 src/VertexBufferLayout.cpp,0/5/05c2f13350c3dac5d1553326b2a1809733278101
-H
-src/GLErrorDisposition.h,4/4/44b64ddb48492199f0d52a28222ec480e9487ff9
 ?
 src/Texture.cpp,9/8/981fa070a313b36ed46b0c585c3f51d67d81c70f
 C
@@ -345,3 +341,17 @@ J
 vendor/imgui/imgui/imgui.h,6/9/696efc68177d69e9cbc1180789bcd0d991870f8f
 M
 vendor/imgui/imgui/imconfig.h,c/d/cdfcfdaed690f4669e9fae790cc93724b6d75487
+H
+tests/TestClearColor.cpp,c/6/c65faf260bb026dd2826b6e6b3b12826b7af53ea
+F
+tests/TestClearColor.h,d/d/dd510ec530afd0730853db816fd75c384f54b52a
+<
+tests/Test.h,b/7/b7b9f42611487413df05e979af488702f51e90cc
+@
+src/Renderer.cpp,f/4/f4cf1e92bf8302a03f8273d2af4f2bba16c045e7
+>
+tests/Test.cpp,2/9/294318fd60e78db16e9db807e035a6e92b24d0e2
+>
+src/Renderer.h,4/4/44fd9635280a3093008c874cd2570658489b5900
+D
+src/VertexBuffer.cpp,a/f/af0c840c6066b2fd0fe786c4831fbb70e4f81fa7

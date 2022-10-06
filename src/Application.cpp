@@ -73,7 +73,7 @@ int main(int argc, char* argv[], char **env)
         std::cout << "GLEW ERROR!" << std::endl;
 
     // ! 输出 OpenGL(GLSL) 版本
-    std::cout<< "OpenGL & Graphics Card Driver Version: " << glGetString(GL_VERSION) << std::endl;
+    std::cout << "OpenGL & Graphics Card Driver Version: " << glGetString(GL_VERSION) << std::endl;
 
     // ! 创建一个主函数内作用域，用于离开时在栈上销毁分配数据，阻止glfwTerminate()函数销毁OpenGL上下文时循环返回一个glError
     {
@@ -92,7 +92,6 @@ int main(int argc, char* argv[], char **env)
 
         GLCall( glEnable(GL_BLEND) );
         GLCall( glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA) );
-
 
         Renderer renderer;
 
@@ -162,6 +161,7 @@ int main(int argc, char* argv[], char **env)
 
     // ! 销毁 OpenGL 上下文
     glfwTerminate();
+
 
 #if MAIN_ARGS_RETRIEVE
     // ! 控制台 console 获取主程序参数

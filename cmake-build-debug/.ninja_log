@@ -36,3 +36,17 @@
 35	2426	1664972253168512981	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o	7d93d400c24d2381
 31	2977	1664972253718395221	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	9eb2c521bd5f9710
 2977	3229	1664972253971830939	OpenGL_BasicRendererProject	a09cf47a2ad524db
+42	5127	1664976846095695801	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o	7d93d400c24d2381
+36	6464	1664976847431559458	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	9eb2c521bd5f9710
+6464	6714	1664976847681132688	OpenGL_BasicRendererProject	a09cf47a2ad524db
+58	860	1665064046984825780	CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBuffer.cpp.o	668798e4a11d6ce8
+861	1101	1665064047226478115	CMakeFiles/OpenGL_BasicRendererProject.dir/src/IndexBuffer.cpp.o	8d54f4f8448f07de
+1102	2035	1665064048158574201	CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexArray.cpp.o	887721fcec810128
+57	2208	1665064048329118669	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Renderer.cpp.o	7d93d400c24d2381
+2035	2933	1665064049055035269	CMakeFiles/OpenGL_BasicRendererProject.dir/src/VertexBufferLayout.cpp.o	2c5c6b3a948d1c37
+53	3071	1665064049191436979	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	9eb2c521bd5f9710
+3071	4030	1665064050155123684	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Texture.cpp.o	c6322f7df1b9a3ad
+2933	4104	1665064050230479486	CMakeFiles/OpenGL_BasicRendererProject.dir/src/GLErrorDisposition.cpp.o	4ea6153b513cf583
+2208	4288	1665064050410029046	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o	7ceb157087d0d252
+4030	4872	1665064050996457975	CMakeFiles/OpenGL_BasicRendererProject.dir/tests/TestClearColor.cpp.o	ade83efa141476ce
+4872	5396	1665064051518096936	OpenGL_BasicRendererProject	a09cf47a2ad524db
