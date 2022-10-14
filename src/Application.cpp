@@ -55,7 +55,7 @@ int main(int argc, char* argv[], char **env)
     // ! 创建有效的 OpenGL Window 上下文
     window = glfwCreateWindow(
             960, 540,
-            "Bonington's OpenGL Renderer Project",
+            "Bonington's OpenGL Basic Renderer Project",
             nullptr, nullptr
             );
     if ( !window )

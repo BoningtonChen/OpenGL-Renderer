@@ -28,6 +28,12 @@ ShaderProgramSource Shader::ParseShader(const std::string& filepath)
 
     std::ifstream stream(filepath, std::ios::in);
 
+    // ! 进行文件路径校验
+    if (!stream)
+    {
+        std::cout << "Invalid filepath occurred! :(" << std::endl;
+    }
+
     enum class ShaderType
     {
         NONE = -1,
