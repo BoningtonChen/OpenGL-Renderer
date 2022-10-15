@@ -347,3 +347,7 @@ F
 src/Renderer.h,4/4/44fd9635280a3093008c874cd2570658489b5900
 D
 src/VertexBuffer.cpp,a/f/af0c840c6066b2fd0fe786c4831fbb70e4f81fa7
+H
+tests/TestClearColor.cpp,c/6/c65faf260bb026dd2826b6e6b3b12826b7af53ea
+>
+tests/Test.cpp,2/9/294318fd60e78db16e9db807e035a6e92b24d0e2
