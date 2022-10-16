@@ -3,8 +3,6 @@ L
 dependencies/GLAD/src/glad.c,2/b/2b361283e4e6cbde93954fff8c90e83fe743a118
 P
  dependencies/GLEW/src/glewinfo.c,3/b/3b5804d65eeb4592c17cb0bdadb18799e36c5225
-B
-src/VertexBuffer.h,8/b/8baa453f29750f66975a296d1434be89b76e4aed
 G
 src/CompilerExtension.h,b/5/b54646d76bdd1303fb687bf162e4452fa3f427fd
 V
@@ -305,8 +303,6 @@ P
  vendor/glm/glm/trigonometric.hpp,8/8/88ad5f965f30eb84de75c62e5166847169be1590
 T
 $vendor/glm/glm/vector_relational.hpp,0/3/0395160b94f7925629a51c00e55b27c5156e9fb8
-J
-src/VertexBufferLayout.cpp,0/5/05c2f13350c3dac5d1553326b2a1809733278101
 ?
 src/Texture.cpp,9/8/981fa070a313b36ed46b0c585c3f51d67d81c70f
 C
@@ -319,8 +315,6 @@ C
 src/IndexBuffer.cpp,8/3/83aca5e15bef272fcce3c2e7200e29b54d5fbaf1
 A
 src/VertexArray.h,7/d/7d7183b74cfdaa0db761dcac5e86cb687c52d531
-H
-src/VertexBufferLayout.h,f/e/fe3cae3325a46024a37e6e0e8a25d596cdb78489
 Q
 !vendor/imgui/imgui/imgui_draw.cpp,8/5/85accff7badf7113a4bb4a7a048742ffa87ad172
 S
@@ -337,17 +331,5 @@ J
 vendor/imgui/imgui/imgui.h,6/9/696efc68177d69e9cbc1180789bcd0d991870f8f
 M
 vendor/imgui/imgui/imconfig.h,c/d/cdfcfdaed690f4669e9fae790cc93724b6d75487
-F
-tests/TestClearColor.h,d/d/dd510ec530afd0730853db816fd75c384f54b52a
-<
-tests/Test.h,b/7/b7b9f42611487413df05e979af488702f51e90cc
 @
 src/Renderer.cpp,f/4/f4cf1e92bf8302a03f8273d2af4f2bba16c045e7
->
-src/Renderer.h,4/4/44fd9635280a3093008c874cd2570658489b5900
-D
-src/VertexBuffer.cpp,a/f/af0c840c6066b2fd0fe786c4831fbb70e4f81fa7
-H
-tests/TestClearColor.cpp,c/6/c65faf260bb026dd2826b6e6b3b12826b7af53ea
->
-tests/Test.cpp,2/9/294318fd60e78db16e9db807e035a6e92b24d0e2

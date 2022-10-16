@@ -105,6 +105,8 @@ add_executable(OpenGL_BasicRendererProject
         tests/TestClearColor.cpp
         tests/TestClearColor.h
         tests/Test.cpp
+        tests/TestTexture2D.cpp
+        tests/TestTexture2D.h
         )
 
 # *读取库地址（记得变更项目名）

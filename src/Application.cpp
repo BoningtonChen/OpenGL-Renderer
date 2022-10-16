@@ -35,9 +35,10 @@
 // * Project tests Header files
 #include "Test.h"
 #include "TestClearColor.h"
+#include "TestTexture2D.h"
 
 // ! 宏状态定义切换
-#define MAIN_ARGS_RETRIEVE 1
+#define MAIN_ARGS_RETRIEVE 0
 
 
 int main(int argc, char* argv[], char **env)
@@ -77,19 +78,6 @@ int main(int argc, char* argv[], char **env)
 
     // ! 创建一个主函数内作用域，用于离开时在栈上销毁分配数据，阻止glfwTerminate()函数销毁OpenGL上下文时循环返回一个glError
     {
-        // ! OpenGL 准备工作
-        float positions[] = {
-                -50.0f, -50.0f, 0.0f, 0.0f,   // 0
-                50.0f, -50.0f, 1.0f, 0.0f,   // 1
-                50.0f, 50.0f, 1.0f, 1.0f,   // 2
-                -50.0f, 50.0f, 0.0f, 1.0f    // 3
-        };
-
-        unsigned int indices[] = {
-                0, 1, 2,
-                2, 3, 0
-        };
-
         GLCall( glEnable(GL_BLEND) );
         GLCall( glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA) );
 
@@ -108,7 +96,7 @@ int main(int argc, char* argv[], char **env)
         currentTest = testMenu;
 
         testMenu -> RegisterTest<test::TestClearColor>("Clear Color");
-
+        testMenu -> RegisterTest<test::TestTexture2D>("Texture 2D");
 
         // ! 循环当前窗口
         while (!glfwWindowShouldClose(window))
