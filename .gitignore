@@ -1,2 +1,5 @@
 /cmake-build-minsizerel
 /cmake-build-relwithdebinfo
+
+/logs/logs_build
+/logs/logs_test

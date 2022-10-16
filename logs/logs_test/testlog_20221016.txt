@@ -1,0 +1,7 @@
+2022-10-16 13:59:06.697102+0800 OpenGL_BasicRendererProject[21472:701030] SecTaskLoadEntitlements failed error=22 cs_flags=20, pid=21472
+2022-10-16 13:59:06.697192+0800 OpenGL_BasicRendererProject[21472:701030] SecTaskCopyDebugDescription: OpenGL_BasicRend[21472]/0#-1 LF=0
+OpenGL & Graphics Card Driver Version: 4.1 INTEL-20.2.44
+[Registering test]: Clear Color...
+[Registering test]: Texture 2D...
+[WARNING]: Uniform u_Color DOESN'T EXIST!, func implemented in: Shader.cpp, [function signature]: int GLGetUniformLocation(const std::string& u_Color).
+

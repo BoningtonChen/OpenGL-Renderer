@@ -43,3 +43,8 @@
 1850	2026	1665899452859772950	OpenGL_BasicRendererProject	c9adcbf84bf5656c
 34	4777	1665899538077276507	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Shader.cpp.o	7ceb157087d0d252
 4778	5084	1665899538389243636	OpenGL_BasicRendererProject	c9adcbf84bf5656c
+32	2306	1665899925213529518	CMakeFiles/OpenGL_BasicRendererProject.dir/tests/TestClearColor.cpp.o	ade83efa141476ce
+34	2331	1665899925238194471	CMakeFiles/OpenGL_BasicRendererProject.dir/tests/Test.cpp.o	ae4dcd7f1045fe1f
+29	3417	1665899926324143590	CMakeFiles/OpenGL_BasicRendererProject.dir/src/Application.cpp.o	9eb2c521bd5f9710
+2306	3931	1665899926842103507	CMakeFiles/OpenGL_BasicRendererProject.dir/tests/TestTexture2D.cpp.o	d0d0860c090552b4
+3931	4158	1665899927066992282	OpenGL_BasicRendererProject	c9adcbf84bf5656c

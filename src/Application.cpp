@@ -40,7 +40,6 @@
 // ! 宏状态定义切换
 #define MAIN_ARGS_RETRIEVE 0
 
-
 int main(int argc, char* argv[], char **env)
 {
 
